@@ -2,7 +2,7 @@
 
 This is the second slide.
 
-```ts
+```ts [1:]
 const fetchWithPolling = async (refetchInMillis: number) => {
   const poll = async () => {
     await fetch("https://dummyjson.com");
@@ -18,7 +18,7 @@ const fetchWithPolling = async (refetchInMillis: number) => {
 
 ## Fake timers
 
-```ts
+```ts [1: 1-2|3|4]
 describe("fetchWithPolling", async () => {
   beforeAll(() => {
     vi.useFakeTimers();
