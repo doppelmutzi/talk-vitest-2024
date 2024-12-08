@@ -1,61 +1,109 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
-		<style>
-			strong {
-				color: rgb(106, 176, 246);
+	<title>reveal.js</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/black.css">
+	<style>
+		strong {
+			color: #00D8FF;
+			/* react color */
+		}
+
+		.logo {
+			height: 4em;
+			padding: 0 1.5em;
+			will-change: filter;
+			transition: filter 300ms;
+		}
+
+		.logo:hover {
+			filter: drop-shadow(0 0 2em #646cffaa);
+		}
+
+		.logo.react:hover {
+			filter: drop-shadow(0 0 2em #61dafbaa);
+		}
+
+		@keyframes logo-spin {
+			from {
+				transform: rotate(0deg);
 			}
-		</style>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section data-markdown>
-					<script type="text/template">
-						# Concepts 
+			to {
+				transform: rotate(360deg);
+			}
+		}
+
+		@media (prefers-reduced-motion: no-preference) {
+			a:nth-of-type(2) .logo {
+				animation: logo-spin infinite 20s linear;
+			}
+		}
+	</style>
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section data-background="#fff">
+				<div>
+					<a href="https://vitest.dev/" target="_blank">
+						<img src="./vitest.svg" class="logo" alt="Viteset logo" />
+					</a>
+					<a href="https://react.dev" target="_blank">
+						<img src="./react.svg" class="logo react" alt="React logo" />
+					</a>
+				</div>
+				<h1>Testing with Vitest</h1>
+				<h3>React + Vitest 🤝</h3>
+			</section>
+			<section data-markdown="slidedeck/agenda.md"></section>
+			<section data-background="#fff" data-markdown>
+				<script type="text/template">
+						# Unit Testing Concepts 
 					</script>
-				</section>
-				<section data-markdown="slidedeck/testing-concepts.md"></section>
-				<section data-markdown="slidedeck/mocking-concepts.md"></section>
-				<section data-markdown>
-					<script type="text/template">
+			</section>
+			<section data-markdown="slidedeck/testing-concepts.md"></section>
+			<section data-markdown="slidedeck/mocking-concepts.md"></section>
+			<section data-markdown>
+				<script type="text/template">
 						# Demo
 					</script>
-				</section>
-				<section data-markdown>
-					<script type="text/template">
+			</section>
+			<section data-markdown>
+				<script type="text/template">
 						# Cheat Sheets
 					</script>
-				</section>
-				<section data-markdown="slidedeck/fake-timers.md"></section>
-			</div>
+			</section>
+			<section data-markdown="slidedeck/fake-timers.md"></section>
 		</div>
+	</div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
 </html>
