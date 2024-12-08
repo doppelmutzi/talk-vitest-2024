@@ -33,7 +33,7 @@ export function anotherFunction(): string {
 
 ## Mock entire module
 
-```ts [1:]
+```ts [2-3|1-14]
 import { describe, it, expect, vi } from 'vitest';
 import * as myModule from "./myModule";
 vi.mock("./myModule");
@@ -55,7 +55,7 @@ describe("Automatic mocking with vi.mock", () => {
 
 ## Spy on module
 
-```ts [1:]
+```ts [2-5,13-14|1-14]
 import { describe, it, expect, vi } from 'vitest';
 import * as myModule from './myModule';
 describe('Spy on myModule', () => {
@@ -77,7 +77,7 @@ describe('Spy on myModule', () => {
 
 ## callback stub
 
-```ts [1:]
+```ts [1-6|1-14]
 import { describe, it, expect, vi } from 'vitest';
 function processCallback(
     callback: (arg: string) => string, arg: string) {
