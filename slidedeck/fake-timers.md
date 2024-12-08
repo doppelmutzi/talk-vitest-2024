@@ -1,7 +1,5 @@
 ## Testing timers
 
-This is the second slide.
-
 ```ts [1:]
 const fetchWithPolling = async (refetchInMillis: number) => {
   const poll = async () => {
@@ -18,7 +16,7 @@ const fetchWithPolling = async (refetchInMillis: number) => {
 
 ## Fake timers
 
-```ts [1: 1-2|3|4]
+```ts [1:]
 describe("fetchWithPolling", async () => {
   beforeAll(() => {
     vi.useFakeTimers();
@@ -38,7 +36,7 @@ describe("fetchWithPolling", async () => {
 
 ## Advance timers
 
-```ts
+```ts [1-4 |1-14]
  test("fetches at specified intervals", async () => {
     globalThis.fetch = vi.fn();
     const fetchMock = globalThis.fetch;
