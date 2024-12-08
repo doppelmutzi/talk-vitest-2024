@@ -1,7 +1,7 @@
 ## Agenda
 
-- Unit testing concepts (~10min)
-- Mocking foundations (~10min)
+- Unit testing concepts (~5min)
+- Mocking foundations (~15min)
 - Demo: Tooling (~5min)
-- Demo: React testing (~5min)
-- Mocking cheat sheets (~10min)
+- Demo: React testing (~10min)
+- Mocking cheat sheets (~5min)
