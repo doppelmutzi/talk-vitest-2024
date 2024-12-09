@@ -1,11 +1,11 @@
 ## Testing timers
 
 ```ts [1:]
-const fetchWithPolling = async (refetchInMillis: number) => {
+const fetchWithPolling = async (refetchMillis: number) => {
   const poll = async () => {
     await fetch("https://dummyjson.com");
 
-    setTimeout(poll, refetchInMillis);
+    setTimeout(poll, refetchMillis);
   };
 
   poll();
