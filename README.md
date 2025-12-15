@@ -1,1 +1,1 @@
-Vitest talk (October 2024)
+Talk about Vitest with Vue and Nuxt (October 2025)
